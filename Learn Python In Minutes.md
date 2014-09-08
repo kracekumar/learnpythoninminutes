@@ -227,7 +227,7 @@ quotes` can be used to create a new string.
 
 #### 2.4 Summary
 
-- `string` is immutable of datatype.
+- `string` is immutable datatype.
 - `string` has lot of useful methods for data processing.
 - `negative index` can be used for accessing the string content from reverse
 direction.
@@ -237,7 +237,7 @@ direction.
 
 - `True` and `False` are Boolean values in Python. `None` is used to represent
 absence of a value.
-- `Python` use `if`, `elif`, `else` for branching.
+- `Python` uses `if`, `elif`, `else` for branching.
 - `==` is used to check two values are equal, `!=` is used for non equality
 checks.
 
@@ -273,7 +273,7 @@ print(number)
 if number % 15 == 0:
     print("fizz buzz")
 elif number % 3 == 0:
-    print ("fizz")
+    print("fizz")
 elif number % 5 == 0:
     print("buzz")
 else:
@@ -384,8 +384,7 @@ data type.
 
 
     nested_collection = [['apple', 'orange'], ['Python', 'Go']]
-    print(nested_collection)
-    # Access first element in first list
+    print(nested_collection) # Access first element in first list
     print(nested_collection[0][0])
 
     [['apple', 'orange'], ['Python', 'Go']]
@@ -411,14 +410,14 @@ data type.
 
 #### 4.4 Summary
 
-- `List` is colletion of hetergenous data types.
+- `List` is collection of hetergenous data types.
 - `List` can have nested elements.
 - `append` is used to insert the element at the end of the list.
 - `in` operator is used to check presence of an element.
 
 #### 5.1 For loop
 
-- `for` loop can be used again data structure which is iterable like `list,
+- `for` loop can be used against data structure which is iterable like `list,
 string`.
 
 #### 5.2 loop over list
@@ -468,13 +467,13 @@ string`.
 
 #### 5.3 Summary
 
-- During every iteration temporary variable hold the value in the iterable.
+- During every iteration temporary variable holds the value in the iterable.
 - `:` at the end of the `for` statement is important.
 - Similar to `if` statement body of `for` loop is indented.
 
 #### 6.1 Functions
 
-- `Function` is unit which may take arguments and computes and returns a value.
+- `Function` is unit which may take arguments, compute and returns a value.
 Sometimes `function` doesn't return a value.
 
 #### 6.2 Let's calculate
@@ -520,8 +519,7 @@ Sometimes `function` doesn't return a value.
 - `Function` can take function as an argument.
 
 
-    def fxy(f, x, y):
-        # f(x, y) = f(x) . f(y)
+    def fxy(f, x, y): # f(x, y) = f(x) . f(y)
         return f(x) * f(y)
     
     def square(x):
@@ -655,7 +653,7 @@ Create a `class Person` with attributes `first_name`, `last_name`, `age`. Add
 
 ### 9.1 Dictionary
 
-- `Dictionary` are `Hash Map or Associative Array` in other programming
+- `Dictionary` is `Hash Map or Associative Array` in other programming
 languages.
 - Every entry in dictionary consist of `Key, Value` pair.
 
@@ -706,9 +704,9 @@ languages.
 
 #### 9.3  Use case
 
-- `Dictionary` is used when representation is key, value pair like monthly
-sales, student marks stored subject wise.
-- `Dictionary` lookup is constant time.
+- `Dictionary` is used when representation is key, value pair like `monthly
+sales, student marks stored subject wise`.
+- `Dictionary` lookup takes constant time.
 
 
 #### 9.4 Summary
