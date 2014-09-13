@@ -924,3 +924,7 @@ end
 
 - Email: me@kracekumar.com
 - Twitter: https://twitter.com/kracetheking
+
+#### 11.3 Contributors
+
+- Thanks [Praseetha](https://twitter.com/void_imagineer) for proof reading and feedback.
