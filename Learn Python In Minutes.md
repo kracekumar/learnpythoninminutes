@@ -139,6 +139,8 @@ quotes` can be used to create a new string.
 
 #### 2.1 String Interpolation
 
+##### Code
+
 ```python
 
 author = 'Kracekumar'
@@ -158,6 +160,8 @@ Long Description:
 {}""".format(author, one_liner_about_python, description)
 print(complete_msg)
 ```
+
+##### Output
 
 ```bash
 Kracekumar
@@ -179,6 +183,8 @@ It is dynamically typed and interpretered language.
 - Everything is an object in Python.
 - `string` has lot of methods like `upper`, `lower`, `strip` etc ..
 
+##### Code
+
 ```python
 print("lower".upper())
 print("upper".lower())
@@ -189,6 +195,8 @@ print("how many times the letter `e` is present in the sentence".count('e'))
 print("Replace delete with remove".replace('delete', 'remove'))
 print("Python is simple and powerful language".startswith('Python'))
 ```
+
+##### Output
 
 ```bash
 LOWER
@@ -203,6 +211,8 @@ True
 
 #### 2.3 Accessing characters in string
 
+##### Code
+
 ```python
 language = 'python'
 print(language[0]) # Print first character
@@ -213,6 +223,8 @@ print(language[-3:]) # print last three characters
 language = language + "." # # Add a dot after python. Here new variable is created
 print(language)
 ```
+
+##### Output
 
 ```bash
 p
@@ -241,17 +253,22 @@ checks.
 
 #### 3.1 Boolean values
 
+#### Code
 
-    print(23 == 32)
-    print(23 != 32)
-    print(True == False)
-    print(True != False)
+```python
+print(23 == 32)
+print(23 != 32)
+print(True == False)
+print(True != False)
+```
 
-    False
-    True
-    False
-    True
-
+##### Output
+```bash
+False
+True
+False
+True
+```
 
 #### 3.2 Branching
 
@@ -298,26 +315,31 @@ converts to 4 spaces`. Don't mix both.
 
 - `Python` uses keyword `and, or, not` for `and, or, not` operations.
 
+##### Code
 
+```python
 
+print(True and False)
+print(23 and 12) # Watch for output
+print(True or False)
+print(23 or 12) # Watch for output
+print("python" or "javascript")
+print("python" and "javascript")
+print(not 23)
 
-    print(True and False)
-    print(23 and 12) # Watch for output
-    print(True or False)
-    print(23 or 12) # Watch for output
-    print("python" or "javascript")
-    print("python" and "javascript")
-    print(not 23)
+```
 
+##### Output
 
-    False
-    12
-    True
-    23
-    python
-    javascript
-    False
-
+```
+False
+12
+True
+23
+python
+javascript
+False
+```
 
 #### 3.5 Summary
 
@@ -334,77 +356,93 @@ data type.
 
 #### 4.1 List in Action
 
+##### Code
 
-    collection = ['Python', 23, 45.9, True] # Collection of different elements.
-    """Representaion of list
-           ---------------------------
-           |'python'| 23 | 45.9 | True|
-           ---------------------------
-            0        1      2      3
+```python
+collection = ['Python', 23, 45.9, True] # Collection of different elements.
+"""Representaion of list
+       ---------------------------
+       |'python'| 23 | 45.9 | True|
+       ---------------------------
+        0        1      2      3
 
-    """
-    print(collection)
-    # Access the first element
-    print(collection[0])
-    # Access the last element
-    print(collection[-1])
-    # Replace the first element
-    collection[0] = 'Go'
-    print(collection[0])
-    # Add an element at the last position
-    collection.append("last")
-    print(collection[-1])
-    # Insert an element at position 2
-    print(collection)
-    collection.insert(2, 12)
-    print(collection)
-    # Delete the last element
-    del collection[-1]
-    print(collection)
-    # Length of the list
-    print(len(collection))
+"""
+print(collection)
+# Access the first element
+print(collection[0])
+# Access the last element
+print(collection[-1])
+# Replace the first element
+collection[0] = 'Go'
+print(collection[0])
+# Add an element at the last position
+collection.append("last")
+print(collection[-1])
+# Insert an element at position 2
+print(collection)
+collection.insert(2, 12)
+print(collection)
+# Delete the last element
+del collection[-1]
+print(collection)
+# Length of the list
+print(len(collection))
+```
 
-    ['Python', 23, 45.9, True]
-    Python
-    True
-    Go
-    last
-    ['Go', 23, 45.9, True, 'last']
-    ['Go', 23, 12, 45.9, True, 'last']
-    ['Go', 23, 12, 45.9, True]
-    5
+##### Output
 
+```bash
+['Python', 23, 45.9, True]
+Python
+True
+Go
+last
+['Go', 23, 45.9, True, 'last']
+['Go', 23, 12, 45.9, True, 'last']
+['Go', 23, 12, 45.9, True]
+5
+```
 
 #### 4.2 Nested list
 
 - `List` can have list inside it.
 
+##### Code
 
+```python
+nested_collection = [['apple', 'orange'], ['Python', 'Go']]
+print(nested_collection) # Access first element in first list
+print(nested_collection[0][0])
+```
 
-    nested_collection = [['apple', 'orange'], ['Python', 'Go']]
-    print(nested_collection) # Access first element in first list
-    print(nested_collection[0][0])
+##### Output
 
-    [['apple', 'orange'], ['Python', 'Go']]
-    apple
+```bash
+[['apple', 'orange'], ['Python', 'Go']]
+apple
+```
 
 
 #### 4.3 Methods
 
+##### Code
 
+```python
+collection = ['Python', 23, 45.9, True]
+print(collection.count(23))
+print(collection.index(23)) # If not found Exception will be raised.
+print('23' in collection) # Check if an element is present in list
+print('p' in 'python') # `in` works on strings, list etc..
+```
 
+##### Output
 
-    collection = ['Python', 23, 45.9, True]
-    print(collection.count(23))
-    print(collection.index(23)) # If not found Exception will be raised.
-    print('23' in collection) # Check if an element is present in list
-    print('p' in 'python') # `in` works on strings, list etc..
-
-    1
-    1
-    False
-    True
-
+```bash
+1
+1
+False
+True
+```
 
 #### 4.4 Summary
 
@@ -420,48 +458,64 @@ string`.
 
 #### 5.2 loop over list
 
+##### Code
 
+```python
 
+for i in ['Python', 23, 45.9, True]: # During every iteration i value is replaced, `python` -> `23` -> `45.9` -> `True`
+    print(i)
+```
 
-    for i in ['Python', 23, 45.9, True]: # During every iteration i value is replaced, `python` -> `23` -> `45.9` -> `True`
-        print(i)
+##### Output
 
-    Python
-    23
-    45.9
-    True
+```bash
+Python
+23
+45.9
+True
+```
 
+##### Code
 
+```python
+for ch in "Python":
+    print(ch)
+```
 
-    for ch in "Python":
-        print(ch)
+##### Output
 
-    P
-    y
-    t
-    h
-    o
-    n
+```bash
+P
+y
+t
+h
+o
+n
+```
 
+##### Code
 
+```python
+for number in range(0, 10): # Produces list of numbers starting from 0 til 9, 10 is excluded.
+    if number % 2 == 0:
+        print("Even")
+    else:
+        print("Odd")
+```
 
-    for number in range(0, 10): # Produces list of numbers starting from 0 til 9, 10 is excluded.
-        if number % 2 == 0:
-            print("Even")
-        else:
-            print("Odd")
+```bash
+Even
+Odd
+Even
+Odd
+Even
+Odd
+Even
+Odd
+Even
+Odd
 
-    Even
-    Odd
-    Even
-    Odd
-    Even
-    Odd
-    Even
-    Odd
-    Even
-    Odd
-
+```
 
 #### 5.3 Summary
 
@@ -476,56 +530,71 @@ Sometimes `function` doesn't return a value.
 
 #### 6.2 Let's calculate
 
+##### Code
 
-
-
+```python
     def square(x): # No need to specify type of the argument.
-        return x * x
+    return x * x
 
-    def cube(x):
-        return square(x) * x
+def cube(x):
+    return square(x) * x
 
-    def msg(): # Function with no arguments and doesn't return any value
-        print("End")
+def msg(): # Function with no arguments and doesn't return any value
+    print("End")
 
 
-    print(square(2))
-    print(square(23))
-    msg()
+print(square(2))
+print(square(23))
+msg()
+```
 
-    4
-    529
-    End
+##### Output
+```bash
+4
+529
+End
+```
 
 
 #### 6.3 Default value
 
+##### Code
 
+```python
+def square(x=2): # if x didn't receive any value, 2 is taken.
+    return x * x
 
-    def square(x=2): # if x didn't receive any value, 2 is taken.
-        return x * x
+print(square(23))
+print(square(2))
+```
 
-    print(square(23))
-    print(square(2))
-
-    529
-    4
-
+##### Output
+```bash
+529
+4
+```
 
 #### 6.4 Function as function argument
 
 - `Function` can take function as an argument.
 
+##### Code
 
-    def fxy(f, x, y): # f(x, y) = f(x) . f(y)
-        return f(x) * f(y)
+```python
+def fxy(f, x, y): # f(x, y) = f(x) . f(y)
+    return f(x) * f(y)
 
-    def square(x):
-        return x * x
+def square(x):
+    return x * x
 
-    print(fxy(square, 2, 3))
+print(fxy(square, 2, 3))
+```
 
-    36
+##### Output
+
+```bash
+36
+```
 
 
 #### 6.5 Summary
@@ -542,36 +611,41 @@ return values.
 
 #### 7.2 Handy builtin functions
 
+##### Code
 
+```python
 
-    print(sum([1, 2, 3, 4])) # 10
-    print(max([1, 2, 3, 4])) # 4
-    print(min([1, 2, 3, 4])) # 1
-    print(sorted([1, 2, 3, 4])) # Ascending order
-    print(sorted([1, 2, 3, 4], reverse=True)) # Descending order
-    print(float(23)) # Typecast into float
-    print(list("23")) # String -> list
-    print(str(23))
-    print(int('23'))
-    # Find data type
-    print(type(23))
-    print(type([2]))
-    print(type('23'))
+print(sum([1, 2, 3, 4])) # 10
+print(max([1, 2, 3, 4])) # 4
+print(min([1, 2, 3, 4])) # 1
+print(sorted([1, 2, 3, 4])) # Ascending order
+print(sorted([1, 2, 3, 4], reverse=True)) # Descending order
+print(float(23)) # Typecast into float
+print(list("23")) # String -> list
+print(str(23))
+print(int('23'))
+# Find data type
+print(type(23))
+print(type([2]))
+print(type('23'))
+```
 
+##### Output
 
-    10
-    4
-    1
-    [1, 2, 3, 4]
-    [4, 3, 2, 1]
-    23.0
-    ['2', '3']
-    23
-    23
-    <type 'int'>
-    <type 'list'>
-    <type 'str'>
-
+```bash
+10
+4
+1
+[1, 2, 3, 4]
+[4, 3, 2, 1]
+23.0
+['2', '3']
+23
+23
+<type 'int'>
+<type 'list'>
+<type 'str'>
+```
 
 #### 7.3 Summary
 
@@ -590,56 +664,62 @@ and `methods`.
 Create a `class Person` with attributes `first_name`, `last_name`, `age`. Add
 `full_name` and `is_major` as methods to class `Person`.
 
+##### Code
 
-    class Person:
-        def __init__(self, first_name, last_name='', age=18): # self is always first argument in all instance method
-            # __init__ is initializer
-            self.first_name = first_name
-            # Instance attribute like instance method self. notation is used inside class to assign value
-            self.last_name = last_name
-            self.__age = age # Private like attribute
+```python
+class Person:
+    def __init__(self, first_name, last_name='', age=18): # self is always first argument in all instance method
+        # __init__ is initializer
+        self.first_name = first_name
+        # Instance attribute like instance method self. notation is used inside class to assign value
+        self.last_name = last_name
+        self.__age = age # Private like attribute
 
-        def full_name(self):
-            # Instance method
-            return self.first_name + ' ' + self.last_name
+    def full_name(self):
+        # Instance method
+        return self.first_name + ' ' + self.last_name
 
-        def get_age(self):
-            # Since __age is private like variable we need to have getters and setters. Getter
-            return self.__age
+    def get_age(self):
+        # Since __age is private like variable we need to have getters and setters. Getter
+        return self.__age
 
-        def set_age(self, age):
-            # Setter
-            self.__age = age
+    def set_age(self, age):
+        # Setter
+        self.__age = age
 
-        def is_major(self):
-            return self.__age >= 18
+    def is_major(self):
+        return self.__age >= 18
 
 
-    guido = Person("Guido", "van rossum", 58) # __init__ of Person is called
-    krace = Person("Kracekumar", "Ramaraju", 24)
-    # Access instance first_name, last_name
-    print(guido.first_name)
-    print(guido.last_name)
-    print(krace.first_name)
-    print(krace.last_name)
-    # Access instance methods
-    print(guido.full_name()) # self is passed implicitly in the background.
-    print(krace.is_major())
+guido = Person("Guido", "van rossum", 58) # __init__ of Person is called
+krace = Person("Kracekumar", "Ramaraju", 24)
+# Access instance first_name, last_name
+print(guido.first_name)
+print(guido.last_name)
+print(krace.first_name)
+print(krace.last_name)
+# Access instance methods
+print(guido.full_name()) # self is passed implicitly in the background.
+print(krace.is_major())
 
-    # Modif the age, first_name
-    krace.set_age(12)
-    krace.first_name = 'kracekumar'
-    print(krace.get_age(), krace.first_name)
-    print(krace.is_major())
+# Modif the age, first_name
+krace.set_age(12)
+krace.first_name = 'kracekumar'
+print(krace.get_age(), krace.first_name)
+print(krace.is_major())
+```
+##### Output
 
-    Guido
-    van rossum
-    Kracekumar
-    Ramaraju
-    Guido van rossum
-    True
-    (12, 'kracekumar')
-    False
+```bash
+Guido
+van rossum
+Kracekumar
+Ramaraju
+Guido van rossum
+True
+(12, 'kracekumar')
+False
+```
 
 
 #### 8.3 Summary
@@ -657,48 +737,54 @@ languages.
 
 #### 9.2 Examples
 
+##### Code
 
+```python
 
-    months = {'jan': 31, 'feb': 28, 'mar': 31, 'apr': 30} # Colon is used to separate key and value
+months = {'jan': 31, 'feb': 28, 'mar': 31, 'apr': 30} # Colon is used to separate key and value
 
-    # `jan` is key and `31` is value
-    """ Visual representation of Dictionary
-    -----------
-    |Key|Value|
-    -----------
-    |jan|31   |
-    -----------
-    |feb|28   |
-    -----------
-    |mar|31   |
-    -----------
-    |apr|30   |
-    -----------
-    """
-    print(months) # Dictionary don't maintain the order of insertion.
-    print(months['jan']) # Values in dictionary are accessed using key, in list index is used.
-    print(months.get('jan')) # .get returns None if the key is missing
-    print('dec' in months) # `in` is used to check presence of key in dictionary.
-    print(len(months)) # len function is used to find total key, value pair in dictionary.
-    for key, value in months.items(): # .items() returns two values during every iteration. First is key, second is value
-        print(key, '->', value)
-    months['feb'] = 29 # Leap year! if key is already present value will be replaced else key, value pair will be added.
-    print(months)
-    months['dec'] = 31
-    print(months)
+# `jan` is key and `31` is value
+""" Visual representation of Dictionary
+-----------
+|Key|Value|
+-----------
+|jan|31   |
+-----------
+|feb|28   |
+-----------
+|mar|31   |
+-----------
+|apr|30   |
+-----------
+"""
+print(months) # Dictionary don't maintain the order of insertion.
+print(months['jan']) # Values in dictionary are accessed using key, in list index is used.
+print(months.get('jan')) # .get returns None if the key is missing
+print('dec' in months) # `in` is used to check presence of key in dictionary.
+print(len(months)) # len function is used to find total key, value pair in dictionary.
+for key, value in months.items(): # .items() returns two values during every iteration. First is key, second is value
+    print(key, '->', value)
+months['feb'] = 29 # Leap year! if key is already present value will be replaced else key, value pair will be added.
+print(months)
+months['dec'] = 31
+print(months)
+```
 
-    {'jan': 31, 'apr': 30, 'mar': 31, 'feb': 28}
-    31
-    31
-    False
-    4
-    ('jan', '->', 31)
-    ('apr', '->', 30)
-    ('mar', '->', 31)
-    ('feb', '->', 28)
-    {'jan': 31, 'apr': 30, 'mar': 31, 'feb': 29}
-    {'jan': 31, 'apr': 30, 'dec': 31, 'mar': 31, 'feb': 29}
+##### Output
 
+```bash
+{'jan': 31, 'apr': 30, 'mar': 31, 'feb': 28}
+31
+31
+False
+4
+('jan', '->', 31)
+('apr', '->', 30)
+('mar', '->', 31)
+('feb', '->', 28)
+{'jan': 31, 'apr': 30, 'mar': 31, 'feb': 29}
+{'jan': 31, 'apr': 30, 'dec': 31, 'mar': 31, 'feb': 29}
+```
 
 #### 9.3  Use case
 
@@ -721,29 +807,38 @@ zero, accessing the missing array index.
 
 #### 10.2 try
 
+##### Code
 
-    l = [1, 2, 3]
-    print(l[5]) # This raises IndexError since list only contains 3 elements.
+```python
 
+l = [1, 2, 3]
+print(l[5]) # This raises IndexError since list only contains 3 elements.
+```
 
+##### Output
 
-    ---------------------------------------------------------------------------
-    IndexError                                Traceback (most recent call last)
+```python
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
 
-    <ipython-input-56-5e770730b19a> in <module>()
-          1 l = [1, 2, 3]
-    ----> 2 print(l[5]) # This raises IndexError since list only contains 3 elements.
-
-
-    IndexError: list index out of range
-
-
-
-    d = {'a': 1}
-    print(d['b']) # Raises KeyError
+<ipython-input-56-5e770730b19a> in <module>()
+1 l = [1, 2, 3]
+----> 2 print(l[5]) # This raises IndexError since list only contains 3 elements.
 
 
-    ---------------------------------------------------------------------------
+IndexError: list index out of range
+```
+
+##### Code
+
+```python
+d = {'a': 1}
+print(d['b']) # Raises KeyError
+```
+
+##### Output
+```python
+---------------------------------------------------------------------------
     KeyError                                  Traceback (most recent call last)
 
     <ipython-input-57-945bd7e85bd3> in <module>()
@@ -753,44 +848,66 @@ zero, accessing the missing array index.
 
     KeyError: 'b'
 
-
+```
 #### 10.3 catch
 
+##### Code
 
-    try:
-        l = [1, 2, 3]
-        print(l[5])
-    except IndexError as e:
-        print(e)
+```python
+try:
+    l = [1, 2, 3]
+    print(l[5])
+except IndexError as e:
+    print(e)
+```
 
-    list index out of range
+##### Output
 
-
-
-    try:
-        d = {'a': 1}
-        print(d['b'])
-    except KeyError as e:
-        print(e)
-
-    'b'
+```bash
+list index out of range
+```
 
 
+##### Code
 
-    #### 10.4 Catch all
 
-    try:
-        l = [1, 3, 3]
-        d = {'a': 1}
-        print(l[5], d['a'])
-    except (IndexError, KeyError) as e:
-        print(e)
-    finally:
-        print("end")
+```python
+try:
+    d = {'a': 1}
+    print(d['b'])
+except KeyError as e:
+    print(e)
+```
 
-    list index out of range
-    end
+##### Output
 
+```bash
+'b'
+```
+
+
+
+#### 10.4 Catch all
+
+##### Code
+
+```python
+try:
+    l = [1, 3, 3]
+    d = {'a': 1}
+    print(l[5], d['a'])
+except (IndexError, KeyError) as e:
+    print(e)
+finally:
+    print("end")
+```
+
+##### Output
+
+```bash
+list index out of range
+end
+```
 
 #### 10.4 Summary
 
