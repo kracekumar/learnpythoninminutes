@@ -1,4 +1,3 @@
-
 ### 1. Introduction
 
 - `Python` is a general purpose, high level language.
@@ -140,90 +139,89 @@ quotes` can be used to create a new string.
 
 #### 2.1 String Interpolation
 
+```python
 
-    author = 'Kracekumar'
-    one_liner_about_python = "Python is simple and powerful language"
-    description = """Python is a general purpose, high level language.
-    It is dynamically typed and interpretered language.
-    """
-    
-    print(author)
-    print(one_liner_about_python)
-    print(description)
-    
-    complete_msg = """Author: {}
-    One liner about Python:
-    - {}
-    Long Description:
-    {}""".format(author, one_liner_about_python, description)
-    print(complete_msg)
+author = 'Kracekumar'
+one_liner_about_python = "Python is simple and powerful language"
+description = """Python is a general purpose, high level language.
+It is dynamically typed and interpretered language.
+"""
 
-    Kracekumar
-    Python is simple and powerful language
-    Python is a general purpose, high level language.
-    It is dynamically typed and interpretered language.
-    
-    Author: Kracekumar
-    One liner about Python:
-    - Python is simple and powerful language
-    Long Description:
-    Python is a general purpose, high level language.
-    It is dynamically typed and interpretered language.
-    
+print(author)
+print(one_liner_about_python)
+print(description)
 
+complete_msg = """Author: {}
+One liner about Python:
+- {}
+Long Description:
+{}""".format(author, one_liner_about_python, description)
+print(complete_msg)
+```
+
+```bash
+Kracekumar
+Python is simple and powerful language
+Python is a general purpose, high level language.
+It is dynamically typed and interpretered language.
+
+Author: Kracekumar
+One liner about Python:
+- Python is simple and powerful language
+Long Description:
+Python is a general purpose, high level language.
+It is dynamically typed and interpretered language.
+
+```
 
 #### 2.2 Methods
 
 - Everything is an object in Python.
 - `string` has lot of methods like `upper`, `lower`, `strip` etc ..
 
+```python
+print("lower".upper())
+print("upper".lower())
+print("captialize".capitalize())
+print(" extra spaces ".strip()) # Very useful in web development while cleaning user input
+print("find a word's position in the sentence".find('word')) # returns starting position
+print("how many times the letter `e` is present in the sentence".count('e'))
+print("Replace delete with remove".replace('delete', 'remove'))
+print("Python is simple and powerful language".startswith('Python'))
+```
 
-    print("lower".upper())
-    print("upper".lower())
-    print("captialize".capitalize())
-    print(" extra spaces ".strip()) # Very useful in web development while cleaning user input
-    print("find a word's position in the sentence".find('word')) # returns starting position
-    print("how many times the letter `e` is present in the sentence".count('e'))
-    print("Replace delete with remove".replace('delete', 'remove'))
-    print("Python is simple and powerful language".startswith('Python'))
-
-    LOWER
-    upper
-    Captialize
-    extra spaces
-    7
-    11
-    Replace remove with remove
-    True
-
+```bash
+LOWER
+upper
+Captialize
+extra spaces
+7
+11
+Replace remove with remove
+True
+```
 
 #### 2.3 Accessing characters in string
 
+```python
+language = 'python'
+print(language[0]) # Print first character
+print(language[-1]) # print last character
+print(len(language)) # builtin function, Find length of the string
+print(language[0:2]) # Print first 3 characters. Slicing `0` is starting index and `2` is last index.
+print(language[-3:]) # print last three characters
+language = language + "." # # Add a dot after python. Here new variable is created
+print(language)
+```
 
-
-    language = 'python'
-    # Print first character
-    print(language[0])
-    # print last character
-    print(language[-1])
-    # Find length f the string
-    print(len(language)) # builtin function
-    # Print first 3 characters
-    print(language[0:2]) # Slicing `0` is starting index and `2` is last index
-    # print last three characters
-    print(language[-3:])
-    # Add a dot after python
-    
-    language = language + "." # Here new variable is created
-    print(language)
-
-    p
-    n
-    6
-    py
-    hon
-    python.
-
+```bash
+p
+n
+6
+py
+hon
+python.
+```
 
 #### 2.4 Summary
 
@@ -343,7 +341,7 @@ data type.
            |'python'| 23 | 45.9 | True|
            ---------------------------
             0        1      2      3
-    
+
     """
     print(collection)
     # Access the first element
@@ -395,7 +393,7 @@ data type.
 
 
 
-    
+
     collection = ['Python', 23, 45.9, True]
     print(collection.count(23))
     print(collection.index(23)) # If not found Exception will be raised.
@@ -483,14 +481,14 @@ Sometimes `function` doesn't return a value.
 
     def square(x): # No need to specify type of the argument.
         return x * x
-    
+
     def cube(x):
         return square(x) * x
-    
+
     def msg(): # Function with no arguments and doesn't return any value
         print("End")
-        
-        
+
+
     print(square(2))
     print(square(23))
     msg()
@@ -506,7 +504,7 @@ Sometimes `function` doesn't return a value.
 
     def square(x=2): # if x didn't receive any value, 2 is taken.
         return x * x
-    
+
     print(square(23))
     print(square(2))
 
@@ -521,10 +519,10 @@ Sometimes `function` doesn't return a value.
 
     def fxy(f, x, y): # f(x, y) = f(x) . f(y)
         return f(x) * f(y)
-    
+
     def square(x):
         return x * x
-    
+
     print(fxy(square, 2, 3))
 
     36
@@ -600,23 +598,23 @@ Create a `class Person` with attributes `first_name`, `last_name`, `age`. Add
             # Instance attribute like instance method self. notation is used inside class to assign value
             self.last_name = last_name
             self.__age = age # Private like attribute
-            
+
         def full_name(self):
             # Instance method
             return self.first_name + ' ' + self.last_name
-        
+
         def get_age(self):
             # Since __age is private like variable we need to have getters and setters. Getter
             return self.__age
-        
+
         def set_age(self, age):
             # Setter
             self.__age = age
-        
+
         def is_major(self):
             return self.__age >= 18
-        
-    
+
+
     guido = Person("Guido", "van rossum", 58) # __init__ of Person is called
     krace = Person("Kracekumar", "Ramaraju", 24)
     # Access instance first_name, last_name
@@ -627,7 +625,7 @@ Create a `class Person` with attributes `first_name`, `last_name`, `age`. Add
     # Access instance methods
     print(guido.full_name()) # self is passed implicitly in the background.
     print(krace.is_major())
-    
+
     # Modif the age, first_name
     krace.set_age(12)
     krace.first_name = 'kracekumar'
@@ -662,7 +660,7 @@ languages.
 
 
     months = {'jan': 31, 'feb': 28, 'mar': 31, 'apr': 30} # Colon is used to separate key and value
-    
+
     # `jan` is key and `31` is value
     """ Visual representation of Dictionary
     -----------
@@ -677,7 +675,7 @@ languages.
     |apr|30   |
     -----------
     """
-    print(months) # Dictionary don't maintain the order of insertion. 
+    print(months) # Dictionary don't maintain the order of insertion.
     print(months['jan']) # Values in dictionary are accessed using key, in list index is used.
     print(months.get('jan')) # .get returns None if the key is missing
     print('dec' in months) # `in` is used to check presence of key in dictionary.
@@ -735,7 +733,7 @@ zero, accessing the missing array index.
     <ipython-input-56-5e770730b19a> in <module>()
           1 l = [1, 2, 3]
     ----> 2 print(l[5]) # This raises IndexError since list only contains 3 elements.
-    
+
 
     IndexError: list index out of range
 
@@ -751,7 +749,7 @@ zero, accessing the missing array index.
     <ipython-input-57-945bd7e85bd3> in <module>()
           1 d = {'a': 1}
     ----> 2 print(d['b']) # Raises KeyError
-    
+
 
     KeyError: 'b'
 
@@ -780,7 +778,7 @@ zero, accessing the missing array index.
 
 
     #### 10.4 Catch all
-    
+
     try:
         l = [1, 3, 3]
         d = {'a': 1}
@@ -809,7 +807,3 @@ zero, accessing the missing array index.
 
 - Email: me@kracekumar.com
 - Twitter: https://twitter.com/kracetheking
-
-
-
-    
