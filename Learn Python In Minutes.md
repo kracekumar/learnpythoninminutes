@@ -108,14 +108,14 @@ Multiplication)` rule is followed while evaluating expression.
 
 #### 1.5 More about variables
 
-- It is possible to create multiple variable in same line.
+- It is possible to create multiple variables in same line.
 
 ```python
 >>> a, b = 12, 23 # Multiple declartion
 >>> print(a, b)
 (12, 23)
 >>> b, a = a, b
->>> print a, b
+>>> print a, b # print is a statement
 23 12
 ```
 
@@ -217,7 +217,7 @@ True
 language = 'python'
 print(language[0]) # Print first character
 print(language[-1]) # print last character
-print(len(language)) # builtin function, Find length of the string
+print(len(language)) # builtin function, Find the length of the string
 print(language[0:2]) # Print first 3 characters. Slicing `0` is starting index and `2` is last index.
 print(language[-3:]) # print last three characters
 language = language + "." # # Add a dot after python. Here new variable is created
@@ -352,17 +352,17 @@ data type.
 
 - `List` is collection of heterogenous data type.
 - `List` is similar to array in other languages.
-- Size of list grows over the period of the program.
+- Size of the list grows over the course of the program.
 
 #### 4.1 List in Action
 
 ##### Code
 
 ```python
-collection = ['Python', 23, 45.9, True] # Collection of different elements.
+collection = ['Ruby', 23, 45.9, True] # Collection of different elements.
 """Representaion of list
        ---------------------------
-       |'python'| 23 | 45.9 | True|
+       |'Ruby'| 23 | 45.9 | True|
        ---------------------------
         0        1      2      3
 
@@ -373,7 +373,7 @@ print(collection[0])
 # Access the last element
 print(collection[-1])
 # Replace the first element
-collection[0] = 'Go'
+collection[0] = 'Python'
 print(collection[0])
 # Add an element at the last position
 collection.append("last")
@@ -392,14 +392,14 @@ print(len(collection))
 ##### Output
 
 ```bash
-['Python', 23, 45.9, True]
+['Ruby', 23, 45.9, True]
 Python
 True
-Go
+Python
 last
-['Go', 23, 45.9, True, 'last']
-['Go', 23, 12, 45.9, True, 'last']
-['Go', 23, 12, 45.9, True]
+['Python', 23, 45.9, True, 'last']
+['Python', 23, 12, 45.9, True, 'last']
+['Python', 23, 12, 45.9, True]
 5
 ```
 
@@ -448,7 +448,7 @@ True
 
 - `List` is collection of hetergenous data types.
 - `List` can have nested elements.
-- `append` is used to insert the element at the end of the list.
+- `append` adds the element at the end of the list.
 - `in` operator is used to check presence of an element.
 
 #### 5.1 For loop
