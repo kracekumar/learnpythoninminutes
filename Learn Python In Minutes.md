@@ -927,4 +927,4 @@ end
 
 #### 11.3 Contributors
 
-- Thanks [Praseetha](https://twitter.com/void_imagineer) for proof reading and feedback.
+- Thanks [Praseetha](https://twitter.com/void_imagineer), [Mudassir Ali](https://www.facebook.com/lime.4951?fref=ts) for feedback.
