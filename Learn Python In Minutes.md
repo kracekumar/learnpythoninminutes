@@ -97,8 +97,8 @@ Let's see how expression are handled without brackets.
 ```
 12 + 20 * 2 - 4 * 2 / 2.0
     12 + 40 - 4 * 2 / 2.0
-        52 - 4 * 2 / 2.0
-            52 - 4 * 1.0
+        12 + 40 - 8 / 2.0
+            12 + 40 - 4.0
                 52 - 4.0
                     48.0
 ```
@@ -533,7 +533,7 @@ Sometimes `function` doesn't return a value.
 ##### Code
 
 ```python
-    def square(x): # No need to specify type of the argument.
+def square(x): # No need to specify type of the argument.
     return x * x
 
 def cube(x):
@@ -565,7 +565,7 @@ def square(x=2): # if x didn't receive any value, 2 is taken.
     return x * x
 
 print(square(23))
-print(square(2))
+print(square())
 ```
 
 ##### Output
@@ -671,7 +671,7 @@ class Person:
     def __init__(self, first_name, last_name='', age=18): # self is always first argument in all instance method
         # __init__ is initializer
         self.first_name = first_name
-        # Instance attribute like instance method self. notation is used inside class to assign value
+        # `self` is used for accessing instance attribute and method.
         self.last_name = last_name
         self.__age = age # Private like attribute
 
