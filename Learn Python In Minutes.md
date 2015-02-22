@@ -77,7 +77,7 @@ Python Interpreter.
 >>> 3 % 2 # Modulo
 1
 >>> 12 ** 23.0 # 12 power of 23
-6.624737266949237e+24 # When number is too large scientif notation is used
+6.624737266949237e+24 # When number is too large scientific notation is used
 >>> 12 ** 12
 8916100448256
 >>> 12 ** 18
